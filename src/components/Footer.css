@@ -1,0 +1,42 @@
+footer {
+    background-color: var(--background-color);
+    color: var(--white-color);
+    padding: 1rem;
+    flex-grow: 1;
+}
+
+footer ul {
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+footer li {
+    width: 33%;
+}
+
+footer img {
+    padding: 1rem 0;
+    max-width: 10rem;
+    height: auto;
+}
+
+footer h2 {
+    font-size: var(--step-2);
+}
+
+@media (min-width: 800px) {
+    footer ul {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 799px) {
+    footer ul {
+        flex-direction: column;
+    }
+
+    footer li {
+        width: 100%;
+    }
+}
