@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400&family=Montserrat:wght@200;300;400;700&display=swap');
+
+:root {
+  --background-color: #151515;
+  --dark-color: #252525;
+  --light-color: #353535;
+  --accent-color: #be3526;
+  --link-color: #235fe0;
+  --white-color: #fafafa;
+  --darker-white-color: #f2f2f2;
+  --space-xs: clamp(0.75rem, 0.69rem + 0.29vw, 0.9375rem);
+  --space-s: clamp(1rem, 0.92rem + 0.39vw, 1.25rem);
+  --space-m: clamp(1.5rem, 1.38rem + 0.58vw, 1.875rem);
+  --space-l: clamp(2rem, 1.84rem + 0.78vw, 2.5rem);
+  --space-xl: clamp(3rem, 2.77rem + 1.17vw, 3.75rem);
+  --space-2xl: clamp(4rem, 3.69rem + 1.55vw, 5rem);
+  --space-3xl: clamp(6rem, 5.53rem + 2.33vw, 7.5rem);
+  --space-xs-s: clamp(0.75rem, 0.59rem + 0.78vw, 1.25rem);
+  --space-s-m: clamp(1rem, 0.73rem + 1.36vw, 1.875rem);
+  --space-m-l: clamp(1.5rem, 1.19rem + 1.55vw, 2.5rem);
+  --space-l-xl: clamp(2rem, 1.46rem + 2.72vw, 3.75rem);
+  --space-l-2xl: clamp(2rem, 1.07rem + 4.66vw, 5rem);
+  --space-xl-2xl: clamp(3rem, 2.38rem + 3.11vw, 5rem);
+  --space-2xl-3xl: clamp(4rem, 2.91rem + 5.44vw, 7.5rem);
+  --step--2: clamp(0.78rem, calc(0.77rem + 0.03vw), 0.80rem);
+  --step--1: clamp(0.94rem, calc(0.92rem + 0.11vw), 1.00rem);
+  --step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+  --step-1: clamp(1.35rem, calc(1.28rem + 0.37vw), 1.56rem);
+  --step-2: clamp(1.62rem, calc(1.50rem + 0.58vw), 1.95rem);
+  --step-3: clamp(1.94rem, calc(1.77rem + 0.87vw), 2.44rem);
+  --step-4: clamp(2.33rem, calc(2.08rem + 1.25vw), 3.05rem);
+  --step-5: clamp(2.80rem, calc(2.45rem + 1.77vw), 3.82rem);
+  --gutter: var(--space-s-m);
+  --border-radius: var(--size-step-1);
+  --transition-base: 250ms ease;
+  --transition-movement: 200ms linear;
+  --transition-fade: 200ms ease;
+  --transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
+  --tracking: -0.05ch;
+  --tracking-s: -0.075ch;
+  --card-width: 15rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background: var(--color-light);
+  color: var(--color-dark);
+  font-size: var(--size-step-1);
+  letter-spacing: var(--tracking);
+  line-height: 1.4;
+  padding: 0;
+  margin: 0;
+  background-color: var(--color-bg);
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: var(--tracking-s);
+  line-height: 1
+}
+
+h1 {
+  font-size: var(--step-5)
+}
+
+h2 {
+  font-size: var(--step-4)
+}
+
+h3 {
+  font-size: var(--step-3)
+}
+
+.flow>*+* {
+  margin-top: var(--flow-space, 1em)
+}
+
+.grid {
+  display: grid;
+  gap: var(--gutter, var(--space-s-l));
+  grid-template-columns: repeat(var(--grid-placement, auto-fill), minmax(var(--grid-min-item-size, 16rem), 1fr))
+}
+
+.grid[data-rows=masonry] {
+  align-items: start;
+  grid-template-rows: masonry
+}
+
+.grid[data-layout="50-50"] {
+  --grid-placement: auto-fit;
+  --grid-min-item-size: clamp(16rem, 50vw, 26rem)
+}
+
+[role="list"] {
+  padding: 0;
+}
+
+.container {
+  width: min(120ch, 100vw - 4rem);
+  margin-inline: auto;
+}

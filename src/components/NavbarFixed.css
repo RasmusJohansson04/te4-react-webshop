@@ -1,0 +1,149 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: var(--white-color);
+    z-index: 10;
+}
+
+.nav-blur {
+    backdrop-filter: blur(10px);
+    transition: 100ms;
+}
+
+.nav-colored {
+    background-color: var(--background-color);
+    transition: 100ms;
+}
+
+.nav-input {
+    min-width: min-content;
+    width: 30%;
+    padding: .25rem;
+    background-color: rgba(255, 255, 255, .75);
+    color: var(--light-color);
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+nav input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: .5rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, .4);
+}
+
+nav ul {
+    width: max-content;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+header {
+    align-items: center;
+}
+
+.img-container {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    width: auto;
+    height: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+    font-size: var(--step-0);
+    position: relative;
+}
+
+.nav-list a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--white-color);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav-list a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+header h1 {
+    font-size: var(--step-1);
+    margin: 0;
+}
+
+nav button {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+}
+
+@media (min-width: 800px) {
+    #mobile {
+        display: none;
+    }
+
+    #desktop {
+        display: block;
+    }
+
+    .nav-button {
+        display: none;
+    }
+}
+
+@media (max-width: 799px) {
+    #mobile {
+        display: block;
+    }
+
+    #desktop {
+        display: none;
+    }
+
+    .nav-collapse {
+        display: none;
+    }
+
+    .nav-list {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+.nav-collapse--show {
+    display: block;
+    width: 100%;
+}
+
+.nav-collapse--show>ul {
+    text-align: right;
+    flex-direction: column;
+    padding: 0;
+}
