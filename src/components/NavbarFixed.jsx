@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
-import './NavbarFixed.css'
+import './Navbar.css'
 
-function NavbarFixed() {
+function Navbar() {
     return (
         <nav id="nav">
             <div className="navbar container">
@@ -20,8 +20,8 @@ function NavbarFixed() {
                 <button className="nav-button"><span className="material-symbols-outlined">menu</span></button>
                 <div className="nav-collapse">
                     <ul className="nav-list">
-                        <li><a href="/products">Produkter</a></li>
-                        <li><a href="/cart">Varukorg</a></li>
+                        <li><Link className='nav-link' to={'/produkter'}>Produkter</Link></li>
+                        <li><Link className='nav-link' to={'/'}>Varukorg</Link></li>
                         <li><a href="#footer">Kontakt</a></li>
                     </ul>
                 </div>
@@ -31,4 +31,4 @@ function NavbarFixed() {
     )
 }
 
-export default NavbarFixed
+export default Navbar

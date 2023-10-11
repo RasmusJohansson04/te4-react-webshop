@@ -20,8 +20,8 @@ function Navbar() {
                 <button className="nav-button"><span className="material-symbols-outlined">menu</span></button>
                 <div className="nav-collapse">
                     <ul className="nav-list">
-                        <li><a href="/products">Produkter</a></li>
-                        <li><a href="/cart">Varukorg</a></li>
+                        <li><Link className='nav-link' to={'/produkter'}>Produkter</Link></li>
+                        <li><Link className='nav-link' to={'/'}>Varukorg</Link></li>
                         <li><a href="#footer">Kontakt</a></li>
                     </ul>
                 </div>

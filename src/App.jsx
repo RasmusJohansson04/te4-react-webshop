@@ -1,23 +1,20 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Hero from './components/Hero'
-import NavbarFixed from './components/NavbarFixed'
-import MainPage from './components/MainPage'
-import Footer from './components/Footer'
 import './App.css'
+import HomePage from './pages/HomePage'
+import ProductPage from './pages/ProductPage'
+import ProductsPage from './pages/ProductsPage'
+import NavbarFixed from './components/NavbarFixed'
+import Footer from './components/Footer'
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <NavbarFixed />
-        <div>
-          <Routes>
-            {/* <Route path="/" element={<TodoList />} /> */}
-          </Routes>
-        </div>
-      </BrowserRouter>
-      <Hero />
-      <MainPage />
+      <NavbarFixed />
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/produkter' element={<ProductsPage />} />
+        <Route path='/produkt' element={<ProductPage />} />
+      </Routes>
       <Footer />
     </>
   )

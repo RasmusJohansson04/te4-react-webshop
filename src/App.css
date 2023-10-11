@@ -1,0 +1,122 @@
+main h1 {
+    font-size: var(--step-1);
+}
+
+main h2 {
+    font-size: var(--step-0);
+}
+
+.slider {
+    margin-bottom: 1rem;
+}
+
+.horizontal-slide {
+    list-style: none;
+    overflow: auto;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+}
+
+.horizontal-slide a {
+    text-decoration: none;
+}
+
+.card {
+    width: var(--card-width);
+}
+
+.card-image {
+    width: 100%;
+    height: 20rem;
+
+}
+
+.card-image>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-text {
+    color: var(--background-color);
+    padding: 0 1rem;
+    padding-bottom: 1rem;
+}
+
+.section {
+    padding: 3rem 0;
+}
+
+.section:nth-child(odd) {}
+
+.section:nth-child(even) {
+    background-color: var(--darker-white-color);
+}
+
+.split {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: row;
+}
+
+.split-image {
+    width: 50%;
+    height: 30rem;
+}
+
+.split-image>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.split-text {
+    width: 50%;
+    padding: 0 2rem;
+}
+
+.split-text button {
+    border: 1px solid var(--background-color);
+    padding: 1rem;
+    background-color: transparent;
+    font-size: var(--step--1);
+}
+
+.split-text button:hover {
+    cursor: pointer;
+    background-color: #20202020;
+}
+
+@media (min-width: 800px) {
+    .split {
+        flex-direction: row;
+    }
+
+    .split-text {
+        width: 50%;
+    }
+
+    .split-image {
+        width: 50%;
+    }
+}
+
+@media (max-width: 799px) {
+    .split {
+        flex-direction: column;
+    }
+
+    .split-text {
+        width: 100%;
+        padding: 0;
+    }
+
+    .split-image {
+        width: 100%;
+    }
+}
