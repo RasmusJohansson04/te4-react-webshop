@@ -33,7 +33,7 @@ function Navbar() {
                 <div className="nav-collapse">
                     <ul className="nav-list">
                         <li><Link className='nav-link' to={'/produkter'}>Produkter</Link></li>
-                        <li><Link className='nav-link' to={'/'}>Varukorg</Link></li>
+                        <li><Link className='nav-link' to={'/varukorg'}>Varukorg</Link></li>
                         <li><a href="#footer">Kontakt</a></li>
                     </ul>
                 </div>
