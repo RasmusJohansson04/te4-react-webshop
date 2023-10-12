@@ -1,9 +1,21 @@
 import { Link } from 'react-router-dom'
-import './Navbar.css'
+import { useState } from 'react'
+import './NavbarFixed.css'
 
 function Navbar() {
+    const [colorChange, setColorchange] = useState(false);
+    const changeNavbarColor = () => {
+        if (window.scrollY >= 80) {
+            setColorchange(true);
+        }
+        else {
+            setColorchange(false);
+        }
+    };
+    window.addEventListener('scroll', changeNavbarColor);
+
     return (
-        <nav id="nav">
+        <nav className={colorChange ? "nav-colored nav-fixed" : "nav-blur nav-fixed"} id="nav">
             <div className="navbar container">
                 <header>
                     <a href="/">
@@ -26,7 +38,6 @@ function Navbar() {
                     </ul>
                 </div>
             </div>
-            <script src="/js/menu.js"></script>
         </nav>
     )
 }

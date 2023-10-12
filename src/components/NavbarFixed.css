@@ -1,4 +1,4 @@
-nav {
+.nav-fixed {
     position: fixed;
     top: 0;
     left: 0;
@@ -103,6 +103,8 @@ nav button {
     border: none;
     color: inherit;
 }
+
+.nav-button {}
 
 @media (min-width: 800px) {
     #mobile {

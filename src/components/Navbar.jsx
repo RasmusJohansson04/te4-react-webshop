@@ -3,7 +3,7 @@ import './Navbar.css'
 
 function Navbar() {
     return (
-        <nav id="nav">
+        <nav className='nav-sticky' d="nav">
             <div className="navbar container">
                 <header>
                     <a href="/">
@@ -26,7 +26,6 @@ function Navbar() {
                     </ul>
                 </div>
             </div>
-            <script src="/js/menu.js"></script>
         </nav>
     )
 }
