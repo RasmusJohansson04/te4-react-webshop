@@ -2,6 +2,45 @@
     text-decoration: none;
 }
 
+.card-container article {
+    margin: 0;
+}
+
 .card-text h2 {
-    font-size: var(--step-0);
+    font-size: var(--step--1);
+
+}
+
+.card-text>* {
+    margin: .5rem 0;
+}
+
+.card {
+    width: var(--card-width);
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.card:hover {
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.card-image {
+    height: 12rem;
+}
+
+.card-image>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-text {
+    color: var(--background-color);
+    background-color: var(--darker-white-color);
+    padding: .5rem;
+    height: 12rem;
 }

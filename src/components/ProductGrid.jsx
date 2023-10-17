@@ -1,6 +1,22 @@
+import { useEffect, useState } from 'react'
 import Card from './Card'
 
 function ProductGrid() {
+    const [data, setData] = useState([])
+
+    async function fetchData() {
+        await fetch('http://localhost:3000/product')
+            .then(res => res.json())
+            .then(result => {
+                setData(result.data)
+            }).catch(err => {
+                console.log(err)
+            })
+    }
+    useEffect(() => {
+        fetchData()
+    }, [])
+
     return (
         <div className="container">
             <h1>VÅRA PRODUKTER</h1>
@@ -23,72 +39,9 @@ function ProductGrid() {
                 </div>
             </div>
             <ul className="product-grid">
-                <li>
-                    <Card label={'Pall'} price={'3000'} />
-                </li>
-                <li>
-                    <Card label={'Pall'} price={'3000'} />
-                </li>
-                <li>
-                    <Card label={'Pall'} price={'3000'} />
-                </li>
-                <li>
-                    <Card label={'Pall'} price={'3000'} />
-                </li>
-                <li>
-                    <Card label={'Pall'} price={'3000'} />
-                </li>
-                <li>
-                    <Card label={'Pall'} price={'3000'} />
-                </li>
-                <li>
-                    <Card label={'Pall'} price={'3000'} />
-                </li>
-                <li>
-                    <Card label={'Pall'} price={'3000'} />
-                </li>
-                <li>
-                    <Card label={'Pall'} price={'3000'} />
-                </li>
-                <li>
-                    <Card label={'Pall'} price={'3000'} />
-                </li>
-                <li>
-                    <Card label={'Pall'} price={'3000'} />
-                </li>
-                <li>
-                    <Card label={'Pall'} price={'3000'} />
-                </li>
-                <li>
-                    <Card label={'Pall'} price={'3000'} />
-                </li>
-                <li>
-                    <Card label={'Pall'} price={'3000'} />
-                </li>
-                <li>
-                    <Card label={'Pall'} price={'3000'} />
-                </li>
-                <li>
-                    <Card label={'Pall'} price={'3000'} />
-                </li>
-                <li>
-                    <Card label={'Pall'} price={'3000'} />
-                </li>
-                <li>
-                    <Card label={'Pall'} price={'3000'} />
-                </li>
-                <li>
-                    <Card label={'Pall'} price={'3000'} />
-                </li>
-                <li>
-                    <Card label={'Pall'} price={'3000'} />
-                </li>
-                <li>
-                    <Card label={'Pall'} price={'3000'} />
-                </li>
-                <li>
-                    <Card label={'Pall'} price={'3000'} />
-                </li>
+                {data.map((product) => (
+                    <Card key={product.id} label={product.name} price={product.price} quantity={product.quantity} categories={product.categories} />
+                ))}
             </ul>
         </div>
     )

@@ -65,11 +65,8 @@
 }
 
 .product-grid {
+    gap: 1rem;
     display: grid;
     align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(var(--card-width), 1fr));
-}
-
-.product-grid .card {
-    margin: 0 auto;
 }

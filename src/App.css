@@ -25,28 +25,6 @@ main h2 {
     text-decoration: none;
 }
 
-.card {
-    width: var(--card-width);
-}
-
-.card-image {
-    width: 100%;
-    height: 20rem;
-
-}
-
-.card-image>img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.card-text {
-    color: var(--background-color);
-    padding: 0 1rem;
-    padding-bottom: 1rem;
-}
-
 .section {
     padding: 3rem 0;
 }
