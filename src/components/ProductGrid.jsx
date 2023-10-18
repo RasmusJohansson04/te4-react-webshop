@@ -18,12 +18,8 @@ function ProductGrid() {
         fetchData()
     }, [page])
 
-    function loadNextPage() {
-        setPage(page + 1)
-    }
-
-    function loadPreviousPage() {
-        setPage(page - 1)
+    function loadPage(num) {
+        setPage(page + num)
     }
 
     return (
@@ -48,12 +44,12 @@ function ProductGrid() {
                 </div>
             </div>
             <ul className="product-grid">
-                {data.map((product) => (
-                    <Card key={product.id} label={product.name} price={product.price} quantity={product.quantity} categories={product.categories} />
+                {data.map((product, index) => (
+                    <Card key={index} id={product.id} label={product.name} price={product.price} quantity={product.quantity} categories={product.categories} />
                 ))}
             </ul>
-            <button onClick={() => { loadNextPage() }}>Nästa Sida</button>
-            <button onClick={() => { loadPreviousPage() }}>Förra Sidan</button>
+            <button onClick={() => { loadPage(1) }}>Nästa Sida</button>
+            <button onClick={() => { loadPage(-1) }}>Förra Sidan</button>
         </div>
     )
 }

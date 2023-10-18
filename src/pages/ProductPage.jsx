@@ -1,8 +1,27 @@
 import './ProductPage.css'
 import Card from '../components/Card'
 import Navbar from '../components/Navbar'
+import { useParams } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 
 function ProductPage() {
+    const [data, setData] = useState([])
+    const { id } = useParams()
+
+    async function fetchData() {
+        await fetch(`http://localhost:3000/product/${id}`)
+            .then(res => res.json())
+            .then(result => {
+                setData(result.data)
+            }).catch(err => {
+                console.log(err)
+            })
+    }
+
+    useEffect(() => {
+        fetchData()
+    }, [])
+
     return (
         <>
             <Navbar />
@@ -13,7 +32,7 @@ function ProductPage() {
                             <img src="/images/ruslan-bardash.jpg" alt="" />
                         </div>
                         <div className="split-text item-info">
-                            <h2>Pall</h2>
+                            <h2>{data.name}</h2>
                             <div className="rating">
                                 <span className="material-symbols-outlined checked">star</span>
                                 <span className="material-symbols-outlined checked">star</span>
@@ -21,7 +40,7 @@ function ProductPage() {
                                 <span className="material-symbols-outlined checked">star</span>
                                 <span className="material-symbols-outlined">star</span>
                             </div>
-                            <h3>3000kr</h3>
+                            <h3>{data.price}kr</h3>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, mollitia accusamus ab nobis ex
                                 natus magnam nemo, praesentium eos delectus asperiores quasi fugit corporis tenetur! Placeat
                                 quae eum aliquid quidem?</p>
