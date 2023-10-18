@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 
 function ProductPage() {
     const [data, setData] = useState([])
+    const [moreData, setMoreData] = useState([])
     const { id } = useParams()
 
     async function fetchData() {
@@ -13,6 +14,13 @@ function ProductPage() {
             .then(res => res.json())
             .then(result => {
                 setData(result.data)
+                fetch(`http://localhost:3000/product/category/${result.data.categories[0].categoryId}`)
+                    .then(res => res.json())
+                    .then(result => {
+                        setMoreData(result.data)
+                    }).catch(err => {
+                        console.log(err)
+                    })
             }).catch(err => {
                 console.log(err)
             })
@@ -106,30 +114,9 @@ function ProductPage() {
                     <div className="slider">
                         <h1>LIKNANDE PRODUKTER</h1>
                         <ul className="horizontal-slide">
-
-                            <li>
-                                <Card label={'Pall'} price={'3000'} />
-                            </li>
-
-                            <li>
-                                <Card label={'Pall'} price={'3000'} />
-                            </li>
-
-                            <li>
-                                <Card label={'Pall'} price={'3000'} />
-                            </li>
-
-                            <li>
-                                <Card label={'Pall'} price={'3000'} />
-                            </li>
-
-                            <li>
-                                <Card label={'Pall'} price={'3000'} />
-                            </li>
-
-                            <li>
-                                <Card label={'Pall'} price={'3000'} />
-                            </li>
+                            {moreData.map((product, index) => (
+                                <Card key={index} id={product.id} label={product.name} price={product.price} quantity={product.quantity} categories={product.categories} />
+                            ))}
                         </ul>
                     </div>
                 </div>
