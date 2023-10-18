@@ -3,9 +3,10 @@ import Card from './Card'
 
 function ProductGrid() {
     const [data, setData] = useState([])
+    const [page, setPage] = useState(1)
 
     async function fetchData() {
-        await fetch('http://localhost:3000/product')
+        await fetch(`http://localhost:3000/product?perPage=30&page=${page}`)
             .then(res => res.json())
             .then(result => {
                 setData(result.data)
@@ -15,7 +16,15 @@ function ProductGrid() {
     }
     useEffect(() => {
         fetchData()
-    }, [])
+    }, [page])
+
+    function loadNextPage() {
+        setPage(page + 1)
+    }
+
+    function loadPreviousPage() {
+        setPage(page - 1)
+    }
 
     return (
         <div className="container">
@@ -43,6 +52,8 @@ function ProductGrid() {
                     <Card key={product.id} label={product.name} price={product.price} quantity={product.quantity} categories={product.categories} />
                 ))}
             </ul>
+            <button onClick={() => { loadNextPage() }}>Nästa Sida</button>
+            <button onClick={() => { loadPreviousPage() }}>Förra Sidan</button>
         </div>
     )
 }
