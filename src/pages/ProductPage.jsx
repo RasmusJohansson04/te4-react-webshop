@@ -2,12 +2,14 @@ import './ProductPage.css'
 import Card from '../components/Card'
 import Navbar from '../components/Navbar'
 import { useParams } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
+import { CartContext } from '../context/cartContextProvider'
 
 function ProductPage() {
     const [data, setData] = useState([])
     const [moreData, setMoreData] = useState([])
     const { id } = useParams()
+    const { addToCart } = useContext(CartContext)
 
     async function fetchData() {
         await fetch(`http://localhost:3000/product/${id}`)
@@ -52,7 +54,7 @@ function ProductPage() {
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, mollitia accusamus ab nobis ex
                                 natus magnam nemo, praesentium eos delectus asperiores quasi fugit corporis tenetur! Placeat
                                 quae eum aliquid quidem?</p>
-                            <button>LÄGG TILL I VARUKORG</button>
+                            <button onClick={() => { addToCart(data) }}>LÄGG TILL I VARUKORG</button>
                         </div>
                     </div>
                     <h1>PRODUKTINFORMATION</h1>

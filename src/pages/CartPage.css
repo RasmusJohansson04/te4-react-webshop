@@ -34,14 +34,6 @@
     border: none;
 }
 
-.cart-buttons {
-    margin-left: auto;
-    gap: 1rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
 .checkout {
     border: 1px solid var(--background-color);
     padding: 1rem;

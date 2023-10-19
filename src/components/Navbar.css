@@ -66,7 +66,7 @@ nav a {
     position: relative;
 }
 
-.nav-list a::after {
+.nav-list a::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -79,7 +79,7 @@ nav a {
     transition: transform 0.25s ease-out;
 }
 
-.nav-list a:hover::after {
+.nav-list a:hover::before {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
@@ -137,4 +137,14 @@ nav button {
     text-align: right;
     flex-direction: column;
     padding: 0;
+}
+
+.cart-size:not(:empty) {
+    position: absolute;
+    transform: translate(-30%, -40%);
+    background-color: var(--link-color);
+    text-align: center;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
 }

@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom'
 import './Navbar.css'
+import { CartContext } from '../context/cartContextProvider'
+import { useContext } from 'react'
 
 function Navbar() {
+    const cart = useContext(CartContext)
     return (
         <nav className='nav-sticky' d="nav">
             <div className="navbar container">
@@ -21,7 +24,8 @@ function Navbar() {
                 <div className="nav-collapse">
                     <ul className="nav-list">
                         <li><Link className='nav-link' to={'/produkter'}>Produkter</Link></li>
-                        <li><Link className='nav-link' to={'/varukorg'}>Varukorg</Link></li>
+                        <li><Link id='cart' className='nav-link' to={'/varukorg'}>Varukorg
+                            <span className='cart-size'>{cart.cart.length !== 0 ? cart.cart.length : ''}</span></Link></li>
                         <li><a href="#footer">Kontakt</a></li>
                     </ul>
                 </div>

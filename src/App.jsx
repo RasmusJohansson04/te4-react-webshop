@@ -5,17 +5,20 @@ import ProductPage from './pages/ProductPage'
 import ProductsPage from './pages/ProductsPage'
 import CartPage from './pages/CartPage'
 import Footer from './components/Footer'
+import { CartContextProvider } from './context/cartContextProvider'
 
 function App() {
   return (
     <>
-      <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/produkter' element={<ProductsPage />} />
-        <Route path='/produkt/:id' element={<ProductPage />} />
-        <Route path='/varukorg' element={<CartPage />} />
-      </Routes>
-      <Footer />
+      <CartContextProvider>
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/produkter' element={<ProductsPage />} />
+          <Route path='/produkt/:id' element={<ProductPage />} />
+          <Route path='/varukorg' element={<CartPage />} />
+        </Routes>
+        <Footer />
+      </CartContextProvider>
     </>
   )
 }

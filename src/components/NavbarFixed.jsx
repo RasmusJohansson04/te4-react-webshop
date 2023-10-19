@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import './NavbarFixed.css'
+import { CartContext } from '../context/cartContextProvider'
+import { useContext } from 'react'
 
 function Navbar() {
+    const cart = useContext(CartContext)
     const [colorChange, setColorchange] = useState(false);
     const changeNavbarColor = () => {
         if (window.scrollY >= 80) {
@@ -33,7 +36,8 @@ function Navbar() {
                 <div className="nav-collapse">
                     <ul className="nav-list">
                         <li><Link className='nav-link' to={'/produkter'}>Produkter</Link></li>
-                        <li><Link className='nav-link' to={'/varukorg'}>Varukorg</Link></li>
+                        <li><Link id='cart' className='nav-link' to={'/varukorg'}>Varukorg
+                            <span className='cart-size'>{cart.cart.length !== 0 ? cart.cart.length : ''}</span></Link></li>
                         <li><a href="#footer">Kontakt</a></li>
                     </ul>
                 </div>
