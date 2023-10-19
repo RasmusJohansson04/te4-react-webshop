@@ -5,6 +5,11 @@ function ProductGrid() {
     const [data, setData] = useState([])
     const [page, setPage] = useState(1)
 
+    function toggleCategories() {
+        const menu = document.querySelector('.category-collapse')
+        menu.classList.toggle('category-collapse--show')
+    }
+
     async function fetchData() {
         await fetch(`http://localhost:3000/product?perPage=30&page=${page}`)
             .then(res => res.json())
@@ -30,7 +35,7 @@ function ProductGrid() {
                     <button>ALLA PRODUKTER</button>
                     <button className="special">ERBJUDANDEN</button>
                 </div>
-                <button className="category-button">KATEGORIER</button>
+                <button onClick={() => { toggleCategories() }} className="category-button">KATEGORIER</button>
                 <div className="category-collapse">
                     <ul className="category-list">
                         <li><button>STOLAR</button></li>

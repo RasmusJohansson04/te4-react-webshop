@@ -1,7 +1,7 @@
 import './ProductPage.css'
 import Card from '../components/Card'
 import Navbar from '../components/Navbar'
-import { useParams } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 import { useContext, useEffect, useState } from 'react'
 import { CartContext } from '../context/cartContextProvider'
 
@@ -10,6 +10,7 @@ function ProductPage() {
     const [moreData, setMoreData] = useState([])
     const { id } = useParams()
     const { addToCart } = useContext(CartContext)
+    const { pathname } = useLocation()
 
     async function fetchData() {
         await fetch(`http://localhost:3000/product/${id}`)
@@ -30,7 +31,7 @@ function ProductPage() {
 
     useEffect(() => {
         fetchData()
-    }, [])
+    }, [pathname])
 
     return (
         <>
