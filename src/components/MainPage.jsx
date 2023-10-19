@@ -11,22 +11,22 @@ function MainPage() {
                     <h1>POPULÄRT JUST NU</h1>
                     <ul className="horizontal-slide">
                         <li>
-                            <Card label={'Pall'} price={'3000'} />
+                            <Card name={'Pall'} price={'3000'} />
                         </li>
                         <li>
-                            <Card label={'Pall'} price={'3000'} />
+                            <Card name={'Pall'} price={'3000'} />
                         </li>
                         <li>
-                            <Card label={'Pall'} price={'3000'} />
+                            <Card name={'Pall'} price={'3000'} />
                         </li>
                         <li>
-                            <Card label={'Pall'} price={'3000'} />
+                            <Card name={'Pall'} price={'3000'} />
                         </li>
                         <li>
-                            <Card label={'Pall'} price={'3000'} />
+                            <Card name={'Pall'} price={'3000'} />
                         </li>
                         <li>
-                            <Card label={'Pall'} price={'3000'} />
+                            <Card name={'Pall'} price={'3000'} />
                         </li>
                     </ul>
                 </div>
@@ -36,22 +36,22 @@ function MainPage() {
                     <h1>NYHETER</h1>
                     <ul className="horizontal-slide">
                         <li>
-                            <Card label={'Pall'} price={'3000'} />
+                            <Card name={'Pall'} price={'3000'} />
                         </li>
                         <li>
-                            <Card label={'Pall'} price={'3000'} />
+                            <Card name={'Pall'} price={'3000'} />
                         </li>
                         <li>
-                            <Card label={'Pall'} price={'3000'} />
+                            <Card name={'Pall'} price={'3000'} />
                         </li>
                         <li>
-                            <Card label={'Pall'} price={'3000'} />
+                            <Card name={'Pall'} price={'3000'} />
                         </li>
                         <li>
-                            <Card label={'Pall'} price={'3000'} />
+                            <Card name={'Pall'} price={'3000'} />
                         </li>
                         <li>
-                            <Card label={'Pall'} price={'3000'} />
+                            <Card name={'Pall'} price={'3000'} />
                         </li>
                     </ul>
                 </div>

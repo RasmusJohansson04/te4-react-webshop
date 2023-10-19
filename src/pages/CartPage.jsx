@@ -16,7 +16,7 @@ function CartPage() {
                     <ul>
                         {cart && cart.cart.map((item, index) => {
                             return (
-                                <CartProduct key={index} id={item.id} label={item.name} price={item.price} quantity={item.quantity} categories={item.categories} />
+                                <CartProduct key={index} id={item.id} name={item.name} price={item.price} quantity={item.quantity} categories={item.categories} />
                             )
                         })}
                     </ul>

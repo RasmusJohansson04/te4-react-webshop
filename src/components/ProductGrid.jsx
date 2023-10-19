@@ -45,7 +45,7 @@ function ProductGrid() {
             </div>
             <ul className="product-grid">
                 {data.map((product, index) => (
-                    <Card key={index} id={product.id} label={product.name} price={product.price} quantity={product.quantity} categories={product.categories} />
+                    <Card key={index} id={product.id} name={product.name} price={product.price} quantity={product.quantity} categories={product.categories} />
                 ))}
             </ul>
             <button onClick={() => { loadPage(1) }}>Nästa Sida</button>

@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom'
 import './Card.css'
+import { useContext } from 'react'
+import { CartContext } from '../context/cartContextProvider'
 
 function Card(props) {
-    let { id, label, price, quantity, categories } = props
+    let { id, name, price, quantity, categories } = props
+    const { addToCart } = useContext(CartContext)
     return (
         <li>
             <div className="card-container">
@@ -12,11 +15,12 @@ function Card(props) {
                             <img src="/images/ruslan-bardash.jpg" alt="" />
                         </div>
                         <div className="card-text">
-                            <h2>{label}</h2>
+                            <h2>{name}</h2>
                             <p>{price}kr</p>
                         </div>
                     </article>
                 </Link>
+                <button onClick={() => { addToCart(props) }}>LÄGG TILL I VARUKORG</button>
             </div>
         </li>
     )

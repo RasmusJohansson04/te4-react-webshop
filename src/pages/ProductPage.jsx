@@ -117,7 +117,7 @@ function ProductPage() {
                         <h1>LIKNANDE PRODUKTER</h1>
                         <ul className="horizontal-slide">
                             {moreData.map((product, index) => (
-                                <Card key={index} id={product.id} label={product.name} price={product.price} quantity={product.quantity} categories={product.categories} />
+                                <Card key={index} id={product.id} name={product.name} price={product.price} quantity={product.quantity} categories={product.categories} />
                             ))}
                         </ul>
                     </div>

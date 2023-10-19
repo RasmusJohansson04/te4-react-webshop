@@ -4,7 +4,7 @@ import { CartContext } from '../context/cartContextProvider'
 import { useContext } from 'react'
 
 function CartProduct(props) {
-    let { id, label, price, quantity, categories } = props
+    let { id, name, price, quantity, categories } = props
     const { removeFromCart } = useContext(CartContext)
 
     return (
@@ -17,7 +17,7 @@ function CartProduct(props) {
                                 <img src="/images/ruslan-bardash.jpg" alt="" />
                             </div>
                             <div className="cart-product-text">
-                                <h2>{label}</h2>
+                                <h2>{name}</h2>
                                 <p>{price}kr</p>
                             </div>
                         </div>

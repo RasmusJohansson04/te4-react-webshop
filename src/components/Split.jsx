@@ -1,9 +1,9 @@
 function Split(props) {
-    let { label } = props
+    let { name } = props
     return (
         <div className="section">
             <div className="container">
-                <h1>{label}</h1>
+                <h1>{name}</h1>
                 <div className="split">
                     <div className="split-image">
                         <img src="/images/ruslan-bardash.jpg" alt="" />
