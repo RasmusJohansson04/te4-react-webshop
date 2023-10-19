@@ -3,7 +3,7 @@ import Card from './Card'
 
 function ProductGrid() {
     const [data, setData] = useState([])
-    const [page, setPage] = useState(1)
+    const [perPage, setPerPage] = useState(20)
 
     function toggleCategories() {
         const menu = document.querySelector('.category-collapse')
@@ -11,7 +11,7 @@ function ProductGrid() {
     }
 
     async function fetchData() {
-        await fetch(`http://localhost:3000/product?perPage=30&page=${page}`)
+        await fetch(`http://localhost:3000/product?perPage=${perPage}`)
             .then(res => res.json())
             .then(result => {
                 setData(result.data)
@@ -21,10 +21,10 @@ function ProductGrid() {
     }
     useEffect(() => {
         fetchData()
-    }, [page])
+    }, [perPage])
 
-    function loadPage(num) {
-        setPage(page + num)
+    function loadMoreContent() {
+        setPerPage(perPage + 20)
     }
 
     return (
@@ -53,8 +53,9 @@ function ProductGrid() {
                     <Card key={index} id={product.id} name={product.name} price={product.price} quantity={product.quantity} categories={product.categories} />
                 ))}
             </ul>
-            <button onClick={() => { loadPage(1) }}>Nästa Sida</button>
-            <button onClick={() => { loadPage(-1) }}>Förra Sidan</button>
+            <div className="center">
+                <button className='hover-button m-bottom' onClick={() => { loadMoreContent() }}>Visa Mer</button>
+            </div>
         </div>
     )
 }

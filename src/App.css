@@ -58,18 +58,6 @@ main h2 {
     padding: 0 2rem;
 }
 
-.split-text button {
-    border: 1px solid var(--background-color);
-    padding: 1rem;
-    background-color: transparent;
-    font-size: var(--step--1);
-}
-
-.split-text button:hover {
-    cursor: pointer;
-    background-color: #20202020;
-}
-
 @media (min-width: 800px) {
     .split {
         flex-direction: row;

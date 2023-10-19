@@ -20,7 +20,7 @@ function CartPage() {
                             )
                         })}
                     </ul>
-                    <button className="checkout">TILL KASSAN</button>
+                    <button className="hover-button m-bottom">TILL KASSAN</button>
                 </div>
             </main>
         </>

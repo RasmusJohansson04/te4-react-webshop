@@ -52,3 +52,9 @@
     color: var(--white-color);
     border: none;
 }
+
+.card-container button:hover {
+    background-color: var(--dark-highlight-color);
+    color: var(--background-color);
+    cursor: pointer;
+}

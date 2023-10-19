@@ -34,14 +34,6 @@
     border: none;
 }
 
-.checkout {
-    border: 1px solid var(--background-color);
-    padding: 1rem;
-    background-color: transparent;
-    font-size: var(--step--1);
-    margin: 1rem;
-}
-
 @media (max-width: 799px) {
     .product {
         flex-direction: column;
