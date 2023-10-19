@@ -6,11 +6,13 @@ import ProductsPage from './pages/ProductsPage'
 import CartPage from './pages/CartPage'
 import Footer from './components/Footer'
 import { CartContextProvider } from './context/cartContextProvider'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
     <>
       <CartContextProvider>
+        <ScrollToTop />
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/produkter' element={<ProductsPage />} />
