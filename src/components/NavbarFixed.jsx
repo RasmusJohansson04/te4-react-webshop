@@ -5,6 +5,7 @@ import { CartContext } from '../context/cartContextProvider'
 import { useContext } from 'react'
 
 function Navbar() {
+
     function toggleMenu() {
         const menu = document.querySelector('.nav-collapse')
         menu.classList.toggle('nav-collapse--show')
@@ -43,6 +44,7 @@ function Navbar() {
                         <li><Link id='cart' className='nav-link' to={'/varukorg'}>Varukorg
                             <span className='cart-size'>{cart.cart.length !== 0 ? cart.cart.length : ''}</span></Link></li>
                         <li><a href="#footer">Kontakt</a></li>
+                        <li><Link className='nav-link' to={'/profil'}>Profil</Link></li>
                     </ul>
                 </div>
             </div>

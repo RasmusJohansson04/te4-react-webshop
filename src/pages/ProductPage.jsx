@@ -55,7 +55,7 @@ function ProductPage() {
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, mollitia accusamus ab nobis ex
                                 natus magnam nemo, praesentium eos delectus asperiores quasi fugit corporis tenetur! Placeat
                                 quae eum aliquid quidem?</p>
-                            <button onClick={() => { addToCart(data) }}>LÄGG TILL I VARUKORG</button>
+                            <button className="hover-button" onClick={() => { addToCart(data) }}>LÄGG TILL I VARUKORG</button>
                         </div>
                     </div>
                     <h1>PRODUKTINFORMATION</h1>
