@@ -12,6 +12,7 @@ function Profile() {
                     <article>
                         <img src={user.profile.picture} alt="user image" />
                         <h1>Hello {user.profile.name}</h1>
+                        <h2>{user.profile.email}</h2>
                     </article>
                 ) : (
                     <button onClick={() => user.login()}>Logga In</button>

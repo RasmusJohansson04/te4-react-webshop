@@ -10,24 +10,13 @@ function MainPage() {
                 <div className="container">
                     <h1>POPULÄRT JUST NU</h1>
                     <ul className="horizontal-slide">
-                        <li>
-                            <Card name={'Pall'} price={'3000'} />
-                        </li>
-                        <li>
-                            <Card name={'Pall'} price={'3000'} />
-                        </li>
-                        <li>
-                            <Card name={'Pall'} price={'3000'} />
-                        </li>
-                        <li>
-                            <Card name={'Pall'} price={'3000'} />
-                        </li>
-                        <li>
-                            <Card name={'Pall'} price={'3000'} />
-                        </li>
-                        <li>
-                            <Card name={'Pall'} price={'3000'} />
-                        </li>
+                        <Card name={'Pall'} price={'3000'} />
+                        <Card name={'Pall'} price={'3000'} />
+                        <Card name={'Pall'} price={'3000'} />
+                        <Card name={'Pall'} price={'3000'} />
+                        <Card name={'Pall'} price={'3000'} />
+                        <Card name={'Pall'} price={'3000'} />
+                        <Card name={'Pall'} price={'3000'} />
                     </ul>
                 </div>
             </div>
@@ -35,24 +24,21 @@ function MainPage() {
                 <div className="container">
                     <h1>NYHETER</h1>
                     <ul className="horizontal-slide">
-                        <li>
-                            <Card name={'Pall'} price={'3000'} />
-                        </li>
-                        <li>
-                            <Card name={'Pall'} price={'3000'} />
-                        </li>
-                        <li>
-                            <Card name={'Pall'} price={'3000'} />
-                        </li>
-                        <li>
-                            <Card name={'Pall'} price={'3000'} />
-                        </li>
-                        <li>
-                            <Card name={'Pall'} price={'3000'} />
-                        </li>
-                        <li>
-                            <Card name={'Pall'} price={'3000'} />
-                        </li>
+                        <Card name={'Pall'} price={'3000'} />
+                        <Card name={'Pall'} price={'3000'} />
+                        <Card name={'Pall'} price={'3000'} />
+                        <Card name={'Pall'} price={'3000'} />
+                        <Card name={'Pall'} price={'3000'} />
+                        <Card name={'Pall'} price={'3000'} />
+                        <Card name={'Pall'} price={'3000'} />
+                        <Card name={'Pall'} price={'3000'} />
+                        <Card name={'Pall'} price={'3000'} />
+                        <Card name={'Pall'} price={'3000'} />
+                        <Card name={'Pall'} price={'3000'} />
+                        <Card name={'Pall'} price={'3000'} />
+                        <Card name={'Pall'} price={'3000'} />
+                        <Card name={'Pall'} price={'3000'} />
+                        <Card name={'Pall'} price={'3000'} />
                     </ul>
                 </div>
             </div>
