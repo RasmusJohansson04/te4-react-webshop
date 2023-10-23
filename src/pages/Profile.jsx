@@ -10,12 +10,12 @@ function Profile() {
             <div className="container">
                 {user.profile.id > 0 ? (
                     <article>
-                        <img src={user.profile.picture} alt="user image" />
+                        <img src={user.profile.picture} alt="User image" />
                         <h1>Hello {user.profile.name}</h1>
                         <h2>{user.profile.email}</h2>
                     </article>
                 ) : (
-                    <button onClick={() => user.login()}>Logga In</button>
+                    <button className="hover-button" onClick={() => user.login()}>Logga In</button>
                 )}
             </div>
         </>
