@@ -6,8 +6,9 @@ import { CartContext } from '../context/cartContextProvider'
 function Card(props) {
     let { id, name, price, quantity, categories } = props
     const { addToCart } = useContext(CartContext)
+    console.log(categories[0])
     return (
-        <li>
+        <li className="center-self">
             <div className="card-container">
                 <Link className='nav-link' to={`/produkt/${id}`}>
                     <article className="card">
@@ -16,7 +17,8 @@ function Card(props) {
                         </div>
                         <div className="card-text">
                             <h2>{name}</h2>
-                            <p>{price}kr</p>
+                            <p>{price}:-</p>
+                            <p>{categories[0].categoryId}</p>
                         </div>
                     </article>
                 </Link>
