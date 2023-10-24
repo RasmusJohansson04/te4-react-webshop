@@ -72,3 +72,22 @@
 .cart-product button:last-child:active {
     background-color: #c94646ef;
 }
+
+@media (max-width: 799px) {
+    .cart-product {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cart-control {
+        margin-left: auto;
+    }
+
+    .cart-control {
+        height: 0;
+    }
+
+    .cart-product-info {
+        height: min-content;
+    }
+}
