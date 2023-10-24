@@ -22,9 +22,21 @@ export const CartContextProvider = ({ children }) => {
         setCart([])
     }
 
+    const increaseQuantity = (item) => {
+        const newCart = cart.map((cartItem) => {
+            if (cartItem.id === item.id) {
+                return { ...cartItem, quantity: cartItem.quantity + 1 }
+            }
+            else {
+                return cartItem
+            }
+        })
+        setCart(newCart)
+    }
+
     return (
         <CartContext.Provider value={{
-            cart, addToCart, removeFromCart, clearCart
+            cart, addToCart, removeFromCart, clearCart, increaseQuantity
         }}>
             {children}
         </CartContext.Provider>

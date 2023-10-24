@@ -5,7 +5,7 @@ import { useContext } from 'react'
 
 function CartProduct(props) {
     let { id, name, price, quantity, categories } = props
-    const { removeFromCart } = useContext(CartContext)
+    const { removeFromCart, increaseQuantity } = useContext(CartContext)
 
     return (
         <li>

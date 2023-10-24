@@ -18,7 +18,7 @@ function Card(props) {
                         <div className="card-text">
                             <h2>{name}</h2>
                             <p>{price}:-</p>
-                            <p>{categories[0].categoryId}</p>
+                            {/* <p>{categories[0].categoryId}</p> */}
                         </div>
                     </article>
                 </Link>
